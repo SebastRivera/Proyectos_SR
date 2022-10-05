@@ -1,4 +1,4 @@
-# Proyectos_SR
+
 
 
 <h1 align="center"> Proyectos </h1> <br>
@@ -12,7 +12,7 @@
 
 
 
-## Table of Contents
+## Carpetas de proyectos
 
 - [Proyecto1](https://github.com/SebastRivera/Proyectos_SR/tree/main/Proyecto_1)
 - [Proyecto2](https://github.com/SebastRivera/Proyectos_SR/tree/main/Proyecto_2)
