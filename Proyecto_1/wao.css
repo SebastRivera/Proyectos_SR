@@ -1,0 +1,601 @@
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    --subtract: 4.25rem !important;
+    line-height: 0.072rem;
+    -webkit-text-size-adjust: 100%;
+    background-color: #0B212F;
+}
+
+body{
+    margin: 0rem;
+}
+
+/* SECCION NAV*/
+
+
+nav {
+    display: blocks;
+}
+
+a {
+    color: #ffffffc4;
+    text-decoration: none;
+    outline: 0rem;
+    margin-right: 2.49rem;
+}
+
+a.contacto{
+    display:flex;
+    background-color: #29a183;
+    color:linear-gradient(to bottom, rgba(255, 255, 255, 0.5),rgba(247, 247, 247, 0.5));
+    height: 2.5rem;
+    width: 8rem;
+    border-radius: 60px;
+    border: #0f5342 0.20rem solid;
+    font-weight: 800;
+    text-align: right;
+    align-items: center;
+    padding-left: 1.7rem;
+}
+
+#menu {
+    z-index: 6.25rem;
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+}
+
+
+
+#menu nav{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    line-height: 4.25rem;
+    background: #0c1d2c;
+    align-items: center;
+    color: aliceblue;
+    font-size: medium;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+
+#menu nav .principal {
+    
+    margin-left: 0.625rem;
+    margin-right: auto;
+    width: 10.5rem;
+    height: 4.25rem;
+    flex: 0 0 auto;
+    overflow: hidden;
+}
+
+img#logo{
+    padding-top: 0.8rem;
+}
+
+.contacto:hover{
+    color:#ffffff;
+    background-image: linear-gradient(to bottom, #69b3a0,#69b3a0);
+}
+
+
+
+/* SECCION PRINCIPAL */
+
+
+.foto{
+    width: 100%;
+    height: 65rem;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(0 0 0 / .5),rgb(0 0 0 / .5)),url(sakuras.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.foto-flex{
+    display: flex;
+    text-align: center;
+    width: 95rem;
+    height: 43rem;
+    column-gap: 0.2 rem ;
+    background-color: #ffffff;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5),rgba(247, 247, 247, 0.5));
+    position: relative;
+    bottom: 14rem;
+    right: 3rem;
+    border-radius: 1%;
+}
+.foto-flex .coltexto{
+    flex:1; 
+    color: #380853;
+    
+}
+
+.foto-flex .coltexto h2{
+    font-family: 'Raleway', sans-serif; 
+    font-style:italic;
+    font-size: 7rem;
+    text-align: left;
+    margin-left: 6rem;
+    margin-top: 5rem;
+    margin-bottom: 0rem;
+    line-height : 7rem;
+}
+
+.foto-flex .coltexto p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: left;
+    margin-left: 6rem;
+    margin-top: 2.3rem;
+    line-height : 2.8rem;
+    color: rgb(0, 0, 0);
+
+}
+
+.bts1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    padding-top: 5rem;
+}
+
+#bt1{
+    background-color: #380853;
+    color:linear-gradient(to bottom, rgba(255, 255, 255, 0.5),rgba(247, 247, 247, 0.5));
+    padding: 1.6rem 2.5rem;
+    border-radius: 60px;
+    border: #0c1d2c 0.20rem solid;
+    font-weight: 800;
+}
+
+#bt1:hover{
+    color:#0c1d2c;
+    background-image: linear-gradient(to bottom, #cfba63,#cfba63);
+}
+
+#bt2{
+    background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.5),rgba(247, 247, 247, 0.5));
+    color:#0c1d2c;
+    padding: 1.5rem 2.5rem;
+    border: #0c1d2c 0.20rem solid;
+    border-radius: 60px;
+    font-weight: 800;
+
+
+}
+
+#bt2:hover{
+    color:#0c1d2c;
+    background-image: linear-gradient(to bottom, #cfba63,#cfba63);
+    transform: scale(2);
+}
+
+.redes {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    justify-items: left;
+    width: 20rem;
+    height: 60rem;
+    column-gap: 5rem ;
+    margin-top: 15rem;
+    margin-left: 0.5rem;
+}
+
+
+
+
+
+
+
+/* SECCION SOBREMI */
+
+ 
+.flex-mi{
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    width: 80rem;
+    height: 35rem;
+    column-gap: 0.1 rem ;
+    background-color: #F0F0F0;
+    position: relative;
+    top: 5rem;
+    padding-right: 28rem;
+    border-radius: 1%;
+    box-shadow: 0 0 2rem rgb(53, 88, 109);
+    line-height : 1.9rem;
+    margin-left: 12rem;
+    margin-top: 8rem;
+}
+
+.flex-mi .columns2{
+    flex:1; 
+    color: #0b0111;
+    
+}
+
+img#yo{
+    margin-top: 1.5rem;
+    margin-left: 15rem;
+    box-shadow: 0 0 1rem rgb(53, 88, 109);
+
+}
+
+.texto-mi{
+    padding-top: 2rem;
+    padding-bottom: 1rem ;
+    margin-left: 15rem;
+    font-size: 2rem;
+    font-family:'Raleway', sans-serif ;
+}
+
+.texto-mi h2{
+    font-weight: normal;
+    color:#12374e;
+    font-weight: 800;
+    padding-bottom: 0rem;
+}
+
+.texto-mi table{
+    padding-top: 3rem;   
+    padding-right: 18rem;
+    text-align: left;
+    font-size: 1.7rem;
+    max-width: 70%;
+    padding: 1rem;
+    margin-bottom: .4rem;
+}
+
+th#tablami {
+    color:#12374e;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    align-items: left;
+    text-align: left;
+    
+}
+
+th#tablami2{
+    color:#12374e;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    align-items: left;
+    text-align: left;
+}
+
+ul#propiedades1{
+    padding-right: 10rem;
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+}
+
+ul#propiedades2{
+    padding-right: 10rem;
+    margin-top: 0.01rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+
+/* SECCION ESTUDIOS */
+
+.nubes{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 1rem 1rem; 
+    grid-template-areas: 
+    "estudios estudios estudios"
+    "escuela colegio universidad"
+    "textoes textocol textouni"; 
+    justify-content: center;
+    margin-top: 16rem;
+    margin-bottom: 10rem;
+    background: linear-gradient(to bottom, rgb(0 0 0 / .5),rgb(0 0 0 / .5)),url(otono.gif);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 40rem;
+    font-family: 'Raleway', sans-serif ;
+    color: rgba(255, 255, 255, 0.863);
+    text-align: center;
+    font-size: 6rem;
+    padding-bottom:2rem;
+}
+
+.estudios { grid-area: estudios; }
+.escuela { grid-area: escuela; }
+.colegio { grid-area: colegio; }
+.universidad { grid-area: universidad;}
+.textoes {align-items: top;grid-area: textoes; font-size:  2rem; color: #ffffffc0;}
+.textocol {grid-area: textocol; font-size:  2rem; color: #ffffffc0; line-height : 1.9rem;}
+.textouni {align-items: top;grid-area: textouni; font-size:  2rem; color: #ffffffc0;}
+
+img#nuestra{
+    border: 0.3rem solid rgb(185, 161, 21);
+    border-radius: 20px;
+}
+
+img#bernar{
+    border: 0.3rem solid rgb(185, 161, 21);
+    border-radius: 20px;
+}
+
+img#espo{
+    border: 0.3rem solid rgb(185, 161, 21);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+/* SECCION PROYECTOS */
+
+.diarias{
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    width: 80rem;
+    height: 35rem;
+    column-gap: 0.1 rem ;
+    background-color: #F0F0F0;
+    position: relative;
+    top: 5rem;
+    margin-left: 12rem;
+    padding-right: 28rem;
+    border-radius: 1%;
+    box-shadow: 0 0 2rem rgb(53, 88, 109);
+    line-height : 1.9rem;
+}
+
+.diarias table#act caption{
+    position: relative;
+    text-align: center;
+    font-size: 1.9rem;
+    font-family: 'Raleway', sans-serif ;
+    line-height: 1.9rem;
+    color:rgba(0, 0, 0, 0.76);
+    font-weight: 800;
+}
+
+table#act{
+    position: relative;
+    padding-top: 2rem;   
+    padding-right: 0rem;
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: 'Raleway', sans-serif ;
+    line-height: 1.9rem;
+    position: absolute;
+    top: 0.05rem;
+    left: 0.1rem;
+    right: 0.5rem;
+    bottom: 0.1rem;
+    border-spacing: 0.9rem;
+    margin-right: 4rem;
+    margin-bottom: 7rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+
+table#act td{
+    border-spacing: 0rem;
+    background-color: #8ab5cf;
+   
+}
+
+
+tr#tit th {
+    color: #12374e;
+    text-align: center;
+    border: #0b0111 solid 0.01rem;
+    padding-bottom: 0.1rem;
+    border-spacing: 0rem;
+    background-color: #8cc0e0;
+}
+
+
+td#ho1{
+    text-align: center;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+td#ho2{
+    text-align: center;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+td#ho3{
+    text-align: center;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+td#ho4{
+    text-align: center;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-bottom: 1.5rem;
+}
+
+
+
+td#desc1{
+    text-align: justify;
+}
+td#desc2{
+    text-align: justify;
+}
+td#desc3{
+    text-align: justify;
+}
+td#desc4{
+    text-align: justify;
+}
+
+table#act a {
+    color: black ;
+    text-align: right;
+    line-height : 1.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 2rem;
+}
+
+td#actividad1:hover{
+    color:#e5ecf1;
+    background-image: linear-gradient(to bottom, #426880,#426880);
+}
+
+td#actividad2:hover{
+    color:#e5ecf1;
+    background-image: linear-gradient(to bottom, #426880,#426880);
+}
+
+td#actividad3:hover{
+    color:#e5ecf1;
+    background-image: linear-gradient(to bottom, #426880,#426880);
+}
+
+td#actividad4:hover{
+    color:#e5ecf1;
+    background-image: linear-gradient(to bottom, #426880,#426880);
+}
+
+
+
+
+
+
+
+
+/* SECCION COSAS FAVORITAS */
+
+.fav{
+    display: grid; 
+    grid-template-columns: 1fr 1fr ; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 1rem 1rem; 
+    grid-template-areas: 
+    "cosas cosas"
+    "artFav vidFav"
+    "textoart textovid"; 
+    position: relative;
+    justify-content: center;
+    margin-top: 18rem;
+    background: linear-gradient(to bottom, rgb(0 0 0 / .5),rgb(0 0 0 / .5)),url(https://imgs.search.brave.com/cDL5MDSenNcOhppvI0U1eInHQznWI6Ycb2pxBv2LyMA/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyc2lu/NGsub3JnL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE3LzA0L1Ry/YW5xdWlsaXR5LVdh/bGxwYXBlci01Lmpw/Zw);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50rem;
+    font-family: 'Raleway', sans-serif ;
+    color: white;
+    text-align: center;
+    font-size: 6rem;
+}
+
+.cosas{ grid-area: cosas; }
+.artFav{ grid-area: artFav; }
+.vidFav{ grid-area: vidFav; }
+.textoart{align-items: top; grid-area: textoart; font-size:  2rem; color: #ffffffc0; line-height : 1.9rem;}
+.textovid{font-size:  2rem; grid-area: textovid; color: #ffffffc0; line-height : 1.9rem;}
+
+img#arti{
+    border-radius: 20px;
+}
+
+iframe#lost{
+    border-radius: 20px;
+}
+
+
+
+img#arti:hover{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+
+/* SECCION MAPA*/
+
+.mapa {
+    display: block;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    width: 9.5rem;
+    height: 28rem;
+    column-gap: 0.1rem ;
+    position: relative;
+    top: 3rem;
+    margin-left: 47.5rem;
+    padding-right: 28rem;
+    border-radius: 1%;
+    box-shadow: 0 0 2rem rgb(53, 88, 109);
+    line-height : 1.9rem;
+    margin-bottom: 10rem;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+    margin: auto;
+}
+  .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.textMapa{
+    position: relative;
+    margin-left: 52.5rem;
+    margin-top: 10rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem ;
+    color: #e5ecf1;
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif ;
+}
+
+/* SECCION CONTACTO*/
+
+
+.contactoform{
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    width: 100%;
+    height: 20rem;
+    column-gap: 0.1 rem ;
+    background-color: #F0F0F0;
+    position: relative;
+    top: 5rem;
+    border-radius: 1%;
+    box-shadow: 0 0 2rem rgb(53, 88, 109);
+    line-height : 1.9rem;
+}  
