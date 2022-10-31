@@ -2,22 +2,23 @@
 <html lang="es">
     <head>
         <title>Sebastián Rivera</title>
-        <link type = "text/css" rel="stylesheet" href="wao.css">   
+        <link type = "text/css" rel="stylesheet" href="/styles/wao.css">   
         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;800&display=swap" rel="stylesheet">
         <meta  charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     
     <body>
         
         <div id="menu">
-        <nav>
-            <a href= "http://localhost:8038/" class="principal" aria-label="Principal"><img id= "logo" src="logo.png" alt="logo" height="40" width="150"></a>
-            <a class="estudios">Mis estudios</a>
-            <a class="diario">Mis proyectos realizados</a>
-            <a class="cosas">Mis cosas favoritas</a>
-            <a class="viaje">Mi viaje deseado</a>
-            <a class="contacto">Contáctame</a>
+        <nav class="responsive">
+            <a href= "http://localhost:8038/" class="principal" aria-label="Principal"><img id= "logo" src="images/logo.png" alt="logo" height="50" width="150"></a>
+            <a href= "#nubes" class="estudios">Mis estudios</a>
+            <a href= "#actividades" class="diario">Mis proyectos realizados</a>
+            <a href= "#cosas" class="cosas">Mis cosas favoritas</a>
+            <a href= "#mapaa" class="viaje">Mi viaje deseado</a>
+            <a href= "#formul" class="contacto">Contáctame</a>
         </nav>
         </div>
         
@@ -28,19 +29,19 @@
                 <p>Estudiante y programador aficionado</p>
                 <div class="bts1">
                     <a href="#sobremi" id="bt1">Sobre mí</a>
-                    <a id="bt2">Contacto</a>
+                    <a href= "#formul" id="bt2">Contacto</a>
                 </div>
               </div>
               <div class="coltexto">
                 <div class="redes">
                     <div class="insta">
-                        <img src="https://imgs.search.brave.com/SE2p8LKS3WvwSXLTqzA_IAjkd9hHEzByHKUVHYKwGTI/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9sb2dv/ZG93bmxvYWQub3Jn/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE3/LzA0L2luc3RhZ3Jh/bS1sb2dvLnBuZw" alt="insta" height="150" width="160">
+                        <a href="https://www.instagram.com/sebluriv/" ><img id= "insta" src="https://imgs.search.brave.com/SE2p8LKS3WvwSXLTqzA_IAjkd9hHEzByHKUVHYKwGTI/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9sb2dv/ZG93bmxvYWQub3Jn/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE3/LzA0L2luc3RhZ3Jh/bS1sb2dvLnBuZw" alt="insta" height="130" width="140"></a>
                     </div>
                     <div class="twitt">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/512px-Twitter-logo.svg.png" alt="twitter" height="150" width="160">
+                        <a href="https://twitter.com/LuxIsBlue1"><img id= "twitt" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/512px-Twitter-logo.svg.png" alt="twitter" height="130" width="140"></a>
                     </div>
                     <div class="spot">
-                        <img src="https://imgs.search.brave.com/NLd53zVRS-3nN6ykj2MJ5LEweVHlY6T6RPetxhrjSys/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9wbmdn/cmlkLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMS8wNS9T/cG90aWZ5LVBORy1M/b2dvLTIwNDh4MjA0/Ni5wbmc" alt="spot" height="150" width="160">
+                        <a href="https://www.linkedin.com/mwlite/in/sebasti%C3%A1n-luis-rivera-ruano-122561210"><img id="spot" src="https://imgs.search.brave.com/WxAFQFlbLBu0JGlIg5jzieu4P8SKTeuftTxUD7jtQ_Y/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jZG4u/ZnJlZWJpZXN1cHBs/eS5jb20vbG9nb3Mv/bGFyZ2UvMngvbGlu/a2VkaW4taWNvbi1s/b2dvLXBuZy10cmFu/c3BhcmVudC5wbmc" alt="spot" height="130" width="140"></a>
                     </div>
                 </div>  
               </div>
@@ -50,7 +51,7 @@
           
         <div id="sobremi" class="flex-mi">
             <div class="columns2">
-                <img id="yo" src="yo.jpg" alt="yo" height="400" width="340">
+                <img id="yo" src="images/yo.jpg" alt="yo" height="400" width="340">
             </div>
             <div class="columns2">
                 <div class="texto-mi">
@@ -58,7 +59,7 @@
                     <p>
                         Soy estudiante de la ESPOL que estudia computación. Me gusta programar, la cocina, tomar fotos y descubrir cosas nuevas. Actualmente me encuentro en mi sexto semestre y espero aprender cosas nuevas todos los días.
                     </p>
-                    <table >
+                    <table id="props">
                         <tr>
                             <th id="tablami">MIS VIRTUDES</th>
                             <th id="tablami2">MIS HOBBIES</th>
@@ -84,7 +85,7 @@
             </div>
         </div>
         
-        <div class="nubes">
+        <div class="nubes" id="nubes">
             <div class="estudios">
             <h2>Mis estudios</h2>
             </div>
@@ -166,7 +167,7 @@
             </table>
         </div>
 
-        <div class="fav">
+        <div id="cosas" class="fav">
             <div class="cosas">
                 <h2>Mis cosas favoritas</h2>
                 </div>
@@ -185,7 +186,7 @@
         </div>
 
         
-        <div class="textMapa"> 
+        <div id = "mapaa" class="textMapa"> 
             <h3>Mi viaje deseado</h3>
         </div>
         <div id="lugar" class="mapa">
@@ -200,8 +201,49 @@
             ></iframe>
         </div>
         
-        <div class="contactoform"> 
-            
+        <div id ="formul" class="contactoform"> 
+            <div class="formu">
+                
+                <div class="izquierda">
+                    <i class="fon fo-envelope"></i>
+                    <i class="fon fo-at"></i>
+                    <i class="fon fo-corr"></i>
+                  </div>
+                  <form action="/">
+                    <h1>Contáctame</h1>
+                    <div class="info">
+                      <input class="fname" type="text" name="name" placeholder="Nombre completo">
+                      <input type="text" name="name" placeholder="Correo electrónico">
+                      <input type="text" name="name" placeholder="Número telefónico">
+                      <input type="text" name="name" placeholder="Sitio web">
+                    </div>
+                    <p>Mensaje</p>
+                    <div>
+                      <textarea rows="4"></textarea>
+                    </div>
+                    <button type="submit" href="/">Enviar</button>
+                  </form>
+
+
+            </div>
+            <div class="linea">
+                <TABLE border="0" cellpadding="0" cellspacing="0">
+                    <TR><TD bgcolor="#0B212F" width="2" height="642 "></TD>
+                    <TD width="5"></TD>
+                    <TD width="*"><BR></TD></TR>
+                </TABLE>
+            </div>
+            <div class="info">
+                <p id="contacto">
+                    Sebastián Luis Rivera Ruano<br>
+                    Guayaquil-Ecuador <br>
+                    tel. (593) 989505342<br>
+                    sebluriv@espol.edu.ec<br>
+                    <br>
+                </p>
+                <p id="mid">Privacy Policy | Do Not Sell My Personal Information</p>
+                <img id="ad" src="https://media1.giphy.com/media/hr92pHvxsy9OvmjgqC/giphy.gif" alt="ad" width="600" height="150">
+            </div>
         </div>
     </body>
     
