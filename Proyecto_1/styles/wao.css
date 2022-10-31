@@ -35,6 +35,8 @@ html {
 
 body{
     margin: 0rem;
+    display:flex;
+    flex-direction:column;
 }
 
 *, ::before, ::after {
@@ -42,6 +44,7 @@ body{
 }
 
 /* SECCION NAV*/
+
 
 
 a {
@@ -830,7 +833,7 @@ img#ad{
     .flex-mi{
         position: relative;
         flex-direction: column;
-        padding-bottom: 50rem;
+        padding-bottom: 55rem;
     }
 
     .nubes {
@@ -1135,6 +1138,7 @@ img#ad{
     .flex-mi{
             padding-right: 0rem;
             margin-top: 2rem;
+            padding-bottom:50rem;
     }
     
     img#yo{
