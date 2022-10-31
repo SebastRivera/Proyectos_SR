@@ -227,7 +227,6 @@ img#logo{
 #bt2:hover{
     color:#0c1d2c;
     background-image: linear-gradient(to bottom, #cfba63,#cfba63);
-    transform: scale(2);
 }
 
 .redes {
@@ -815,6 +814,31 @@ img#ad{
   }
 
   @media (max-width: 1318px) {
+    
+    
+    .diarias{
+        height: 60rem;
+    }
+    
+    table#act {
+        font-size: small;
+        width:70%;
+        height: 80%;
+        margin-left: 9.8rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    table#act td{
+        padding: 0rem;
+    }
+
+    table#act tr th{
+        padding: 0rem;
+    }
+    
+    
     .foto-flex {
       position: relative;
       flex-direction: column;
@@ -933,6 +957,7 @@ img#ad{
     }
 
     
+    
 }
 
 @media screen and (max-width: 1100px){
@@ -1017,6 +1042,9 @@ img#ad{
 
     .diarias{
             padding-bottom: 60rem;
+            height: 70rem;
+            padding-right: 0rem;
+            text-align: center;
     }
         
     .cosas h2{
@@ -1096,11 +1124,6 @@ img#ad{
             width: 20rem;
     }
     
-    .diarias {
-            height: 70rem;
-            padding-right: 0rem;
-            text-align: center;
-    }
     
     .foto-flex {
             margin-left: 5.5rem;
@@ -1146,34 +1169,7 @@ img#ad{
             width: 20rem;
             margin-left: 1.5rem;
     }
-    table#act {
-            width:30%;
-            margin-left: 1.8rem;
-    }
-    table#act th {
-            display: none;
-    }
-    table#act tr:nth-of-type(2n) {
-            background-color: inherit;
-    }
-    table#act tr td:first-child {
-            background: #3d97d3;
-            font-weight:bold;
-            font-size:1rem;
-    }
-    table#act tbody td {
-            display: block;
-            text-align:center;
-    }
-    table#act tbody td:before {
-            content: attr(data-th);
-            display: block;
-            text-align:center;
-    }
     
-     table#props{
-            display:none;
-    }
     
     .redes{
             height:40rem
@@ -1184,6 +1180,36 @@ img#ad{
 
 @media screen and (max-width: 600px) {
     
+    table#act {
+        width:30%;
+        margin-left: 1.8rem;
+    }
+    table#act th {
+        display: none;
+    }
+    table#act tr:nth-of-type(2n) {
+        background-color: inherit;
+    }
+    table#act tr td:first-child {
+        background: #3d97d3;
+        font-weight:bold;
+        font-size:1rem;
+    }   
+    table#act tbody td {
+        display: block;
+        text-align:center;
+    }
+    table#act tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center;
+    }
+
+    table#props{
+        display:none;
+    }
+
+
     .diarias{
         padding-bottom: 60rem;
     }
@@ -1312,64 +1338,32 @@ img#ad{
     img#yo{
         height: 20rem;
         width: 20rem;
-        margin-left: 1.5rem;
+        margin-left: 2rem;
     }
-    table#act {
-        width:30%;
-        margin-left: 1.8rem;
-    }
-    table#act th {
-        display: none;
-    }
-    table#act tr:nth-of-type(2n) {
-        background-color: inherit;
-    }
-    table#act tr td:first-child {
-        background: #3d97d3;
-        font-weight:bold;
-        font-size:1rem;
-    }
-    table#act tbody td {
-        display: block;
-        text-align:center;
-    }
-    table#act tbody td:before {
-        content: attr(data-th);
-        display: block;
-        text-align:center;
-    }
-
-    table#props{
-        display:none;
-    }
+    
 
     .redes{
         height:40rem
     }
 
-}
+    .foto{
+        width: 100%;
+    }
 
-
-@media (min-width:320px)  { 
-        /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-            .foto{
-                width: 100%;
-            }
-
-            .redes{
-                margin-left: 3rem;
-            }
-            img#insta{
-                height: 6.5rem;
-                width: 6rem;
-            }
-            img#twitt{
-                height: 6.5rem;
-                width: 6rem;
-            }
-            img#spot{
-                height: 6.5rem;
-                width: 6rem;
-            }
+    .redes{
+        margin-left: 3rem;
+    }
+    img#insta{
+        height: 6.5rem;
+        width: 6rem;
+    }
+    img#twitt{
+        height: 6.5rem;
+        width: 6rem;
+    }
+    img#spot{
+        height: 6.5rem;
+        width: 6rem;
+    }
 
 }
