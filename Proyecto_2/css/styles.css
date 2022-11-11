@@ -1,0 +1,14 @@
+.nav-item .input-group .form-outline {
+    margin-left: 1rem;
+}
+
+div .response{
+    display: flex;
+    text-align: center;
+    width: 70%;
+    height: 43rem;
+    background-color: #ffffff;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5),rgba(247, 247, 247, 0.5));
+    position:absolute;
+    border-radius: 1%;
+}
