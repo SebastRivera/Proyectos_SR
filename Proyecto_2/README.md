@@ -4,7 +4,7 @@ Página web interactiva y adaptable que utiliza las tecnologías disponibles del
 
 ## Descripción de página
 
--
+
 
 ### Lineamientos a aplicarse
 
