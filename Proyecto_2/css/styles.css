@@ -242,11 +242,50 @@ table{
 
 
 
-table#graph{
+#graph {
     height: 200px;
     max-width: 500px;
     margin: 0 auto;
-  }
+}
+#graph td .data {
+transition-duration: 0.6s;
+transform: scale(0);
+}
+#graph td:hover .data {
+transform: scale(1);
+color:black;
+}
+  
+
+#graph2 {
+  height: 300px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#graph2 td .data2{
+    transform: rotate(90deg);
+    color:rgb(247, 242, 242);
+}
+  
+
+#graph2 td {
+  background-image: linear-gradient(
+    45deg,
+    #45b9e7,
+    #2570b6,
+    #2838c9,
+    #47c7ee,
+    #31d6bb,
+    #3bdd9a
+  );
+  background-size: 600%;
+  animation: gradient-animation 3s linear infinite alternate;
+}
+@keyframes gradient-animation {
+  0%   { background-position:   0%; }
+  100% { background-position: 100%; }
+}
 
 
 a:hover {
