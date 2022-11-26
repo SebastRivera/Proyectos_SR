@@ -63,10 +63,17 @@ div .fila2{
 }
 
 @media (max-width: 992px){
-.grafico2 {
+    .grafico2 {
     flex: 0 0 31.66667%;
     max-width: 31.66667%;
 }
+
+    .respuesta{
+    margin-top: 1rem;
+}
+
+    
+
 }
 
 .grafico2{
@@ -99,9 +106,22 @@ div .fila2{
 .grafico2 {
     width: 41.6666666667%;
 }
+#intro{
+    height: 180vh;
+}   
 }
 
-div.shadow {
+@media (max-width: 600px){
+    .relleno{
+    width: 20rem;
+    margin-right: 1rem;
+    font-size: 0.6rem;
+    }
+    
+    
+}
+
+.relleno {
     width: 30rem;
     margin: 0 auto;
     background-color: rgb(225, 226, 218);
@@ -109,18 +129,16 @@ div.shadow {
     margin-top: 4rem;
 }
 
-div.shadow{
+.relleno{
     margin-bottom: 1.5rem!important;
 }
-div.shadow {
+.relleno {
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
 }
-div.shadow {
+.relleno {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid #e3e6f0;
@@ -177,6 +195,10 @@ div .response{
     border-radius: 1%;
 }
 
+div.respuesta{
+    width: 100%;
+}
+
 div.card {
 	width: 55rem;
 	margin: 0 auto;
@@ -184,7 +206,7 @@ div.card {
     border-radius: 1%;
     margin-top: 4rem;
     margin-right: 3rem;
-    margin-left: 20rem;
+    margin-left: 0rem;
 }
 
 img.card-img-top{
@@ -209,12 +231,22 @@ p.weight{
     margin-bottom: 0rem;
 }
 
+h2#bigtitle{
+    font-family: Roboto;
+    font-weight: 300;
+    color:rgb(94, 191, 230);  
+    font-size: 3rem;
+    text-align: center;
+}
+
+
 h2.lista{
     font-family: Roboto;
     font-weight: 300;
     color:white;  
     font-size: 5rem;
     text-align: center;
+    animation-delay: 0.3s;
 }
 
 h2.lista2{
@@ -223,13 +255,15 @@ h2.lista2{
     font-size: 5rem;
     color:white;
     font-style: italic;
-    text-decoration: underline;  
     text-align: center;
+    animation-delay: 0.3s;
 }
 
 h2.lista2:hover{
     color: #3e5cb8;
+    text-decoration: none;
 }
+
 
 table{
     display:block;
@@ -250,6 +284,8 @@ table{
 #graph td .data {
 transition-duration: 0.6s;
 transform: scale(0);
+position: relative;
+bottom:1.5rem;
 }
 #graph td:hover .data {
 transform: scale(1);
@@ -265,7 +301,9 @@ color:black;
 
 #graph2 td .data2{
     transform: rotate(90deg);
-    color:rgb(247, 242, 242);
+    color:rgb(12, 10, 10);
+    position: relative;
+    left:1.5rem;
 }
   
 
@@ -298,3 +336,47 @@ a:hover {
 [role=button] {
     cursor: pointer;
 }
+
+.dropbtn {
+  background-color: #F8F9FC;
+  color: rgb(175, 175, 175);
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #cfd1cf;
+}
+
+:root{
+    --animate-delay: 3.5s;
+  }

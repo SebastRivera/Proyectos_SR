@@ -80,20 +80,18 @@ window.onload = function () {
             inChol = propiedades["Cholesterol"].indexOf("m")-1
             coles = propiedades["Cholesterol"].slice(0,inChol)
           }
-          if(propiedades["Serving Weight"] === null){
+          if(propiedades["Serving Weight"] === "n/a"){
             serv = "0"
           }
           else{
             inServ = propiedades["Serving Weight"].indexOf(" ")
             serv = propiedades["Serving Weight"].slice(0,inServ)
-            console.log(serv)
           }
-          if(propiedades["Servings"] === null){
+          if(propiedades["Servings"] === "n/a"){
             servs = "0"
           }
           else{
             servs = propiedades["Servings"]
-            console.log(servs)
           }
 
 
@@ -102,7 +100,7 @@ window.onload = function () {
 
           // Inicio del procesamiento
           document.getElementById('respuesta').innerHTML = `
-          <div class="fila1">
+          <div class="fila1 animate__animated animate__jackInTheBox">
             <div class="card">
               <img src="${imagen}" class="card-img-top" alt="...">
               <div class="card-body">
@@ -121,23 +119,24 @@ window.onload = function () {
               <!-- Content Row -->
 
                       <div class="grafico2">
-                        <div class="shadow">
+                        <div class="relleno">
                             <!-- Card Header - Dropdown -->
                             <div
                                 class="header-card">
-                                <h6 class="tituloG">DATOS2</h6>
-                                <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        
-                                 </div>
+                                <h6 class="tituloG">Nutritional data</h6>
+                                <div class="dropdown">
+                                  <button class="dropbtn">▼</button>
+                                  <div class="dropdown-content">
+                                  <a id= "op1" href="#">Data 1</a>
+                                  <a id="op2" href="#">Data 2</a>
+                                  </div>
+                                </div>
                                 
                             </div>
                             <!-- Card Body -->
-                            <div class="car-body">
+                            <div id= "tablaD" class="car-body">
                               <table class="charts-css column show-labels show-primary-axis show-4-secondary-axes" id="graph">
-                              <caption> Nutritive Data </caption> <thead><tr><th scope="col"> Data </th> <th scope="col"> Progress </th></tr></thead> <tbody><tr><th scope="row"> Calories</th> <td style="--size:0.${calorias};"><span class="data">${calorias}</span></td></tr> <tr><th scope="row"> Carbohydrate </th> <td style="--size:0.${carbo};"><span class="data">${carbo}</span></td></tr> <tr><th scope="row"> Cholesterol</th> <td style="--size:0.${coles}"><span class="data">${coles}</span></td></tr></tbody>
+                              <caption> Nutritive Data </caption> <thead><tr><th scope="col"> Data </th> <th scope="col"> Progress </th></tr></thead> <tbody><tr><th scope="row"> Calories(cal)</th> <td style="--size:0.${calorias};"><span class="data">${calorias}</span></td></tr> <tr><th scope="row"> Carbohydrate(mg) </th> <td style="--size:0.${carbo};"><span class="data">${carbo}</span></td></tr> <tr><th scope="row"> Cholesterol(mg)</th> <td style="--size:0.${coles}"><span class="data">${coles}</span></td></tr></tbody>
 
                               </table>
 
@@ -147,23 +146,18 @@ window.onload = function () {
                     </div>
 
                     <div class="grafico2">
-                        <div class="shadow">
+                        <div class="relleno">
                             <!-- Card Header - Dropdown -->
                             <div
                                 class="header-card">
-                                <h6 class="tituloG">DATOS2</h6>
-                                <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        
-                                 </div>
+                                <h6 class="tituloG">Serving data</h6>
+                                
                                 
                             </div>
                             <!-- Card Body -->
                             <div class="car-body">
                               <table class="charts-css bar multiple show-labels show-primary-axis data-spacing-10" id="graph2">
-                              <caption> Nutritive Data </caption> <thead><tr><th scope="col"> Data </th> <th scope="col"> Progress </th></tr></thead> <tbody><tr><th scope="row"> Serving Weight</th> <td style="--size:0.${serv};"><span class="data2">${serv}</span></td></tr> <tr><th scope="row"> Serving Size </th> <td style="--size:0.0${servs};"><span class="data2">${servs}</span></td></tr></tbody>
+                              <caption> Nutritive Data </caption> <thead><tr><th scope="col"> Data </th> <th scope="col"> Progress </th></tr></thead> <tbody><tr><th scope="row"> Serving Weight(g)</th> <td style="--size:0.${serv};"><span class="data2">${serv}</span></td></tr> <tr><th scope="row"> Serving Size(u) </th> <td style="--size:0.0${servs};"><span class="data2">${servs}</span></td></tr></tbody>
 
                               </table>
 
@@ -177,8 +171,122 @@ window.onload = function () {
           </div>
         `
 
+          document.getElementById('op2').addEventListener('click', () => {
 
+            let id = document.getElementById("form1").value
+            let url = `https://www.fishwatch.gov/api/species/${id}`
+        
+            fetch(url)
+              .then(response => response.json())
+              .then(response => { 
+                let propiedades = response[0]
+                if (propiedades["Protein"] === null){
+                  prot = "0"
+                }
+                else{
+                  if(propiedades["Protein"].includes(".")){
+                    inProt = propiedades["Protein"].indexOf(".")
+                    prot = propiedades["Protein"].slice(0,inProt)
+                  }
+                  else{
+                    inProt = propiedades["Protein"].indexOf(" ")
+                    prot = propiedades["Protein"].slice(0,inProt)
+                  }
+                  
+                }
+                if(propiedades["Selenium"] === null){
+                  selen = "0"
+                }
+                else{
+                  if(propiedades["Selenium"].includes(".")){
+                    inSel = propiedades["Selenium"].indexOf(".")
+                    selen = propiedades["Selenium"].slice(0,inSel)
+                  }
+                  else{
+                    inSel = propiedades["Selenium"].indexOf(" ")
+                    selen = propiedades["Selenium"].slice(0,inSel)
+                  }
+                }
+                if(propiedades["Sodium"] === null){
+                  sod = "0"
+                }
+                else{
+                  if(propiedades["Sodium"].includes(".")){
+                    inSod = propiedades["Sodium"].indexOf(".")
+                    sod = propiedades["Sodium"].slice(0,inSod)
+                  }
+                  else{
+                    inSod = propiedades["Sodium"].indexOf(" ")
+                    sod = propiedades["Sodium"].slice(0,inSod)
+                  }
+                }
+                  prot = 
+               
+                document.getElementById('tablaD').innerHTML = `
+                <table class="charts-css column show-labels show-primary-axis show-4-secondary-axes" id="graph">
+                <caption> Nutritive Data 2 </caption> <thead><tr><th scope="col"> Data </th> <th scope="col"> Progress </th></tr></thead> <tbody><tr><th scope="row"> Protein(g)</th> <td style="--size:0.${prot};"><span class="data">${prot}</span></td></tr> <tr><th scope="row"> Selenium(mg) </th> <td style="--size:0.0${selen};"><span class="data">${selen}</span></td></tr> <tr><th scope="row"> Sodium(mg)</th> <td style="--size:0.0${sod}"><span class="data">${sod}</span></td></tr></tbody>
 
+                </table>
+                `
+      
+      
+      
+              })
+      
+              .catch(error => {
+                document.getElementById('response').innerHTML = JSON.stringify(error.message)
+              })
+      
+      
+          })
+
+          document.getElementById('op1').addEventListener('click', () => {
+
+            let id = document.getElementById("form1").value
+            let url = `https://www.fishwatch.gov/api/species/${id}`
+        
+            fetch(url)
+              .then(response => response.json())
+              .then(response => { 
+                let propiedades = response[0]
+                if (propiedades["Calories"] === null){
+                  calorias = "0"
+                }
+                else{
+                  calorias = propiedades["Calories"]
+                }
+                if(propiedades["Carbohydrate"] === null){
+                  carbo = "0"
+                }
+                else{
+                  inCar = propiedades["Carbohydrate"].indexOf("g")-1
+                  carbo = propiedades["Carbohydrate"].slice(0,inCar)
+                }
+                if(propiedades["Cholesterol"] === null){
+                  coles = "0"
+                }
+                else{
+                  inChol = propiedades["Cholesterol"].indexOf("m")-1
+                  coles = propiedades["Cholesterol"].slice(0,inChol)
+                }
+      
+                document.getElementById('tablaD').innerHTML = `
+                <table class="charts-css column show-labels show-primary-axis show-4-secondary-axes" id="graph">
+                <caption> Nutritive Data </caption> <thead><tr><th scope="col"> Data </th> <th scope="col"> Progress </th></tr></thead> <tbody><tr><th scope="row"> Calories(cal)</th> <td style="--size:0.${calorias};"><span class="data">${calorias}</span></td></tr> <tr><th scope="row"> Carbohydrate(mg) </th> <td style="--size:0.${carbo};"><span class="data">${carbo}</span></td></tr> <tr><th scope="row"> Cholesterol(mg)</th> <td style="--size:0.${coles}"><span class="data">${coles}</span></td></tr></tbody>
+
+                </table>
+                `
+      
+      
+      
+              })
+      
+              .catch(error => {
+                document.getElementById('response').innerHTML = JSON.stringify(error.message)
+              })
+      
+      
+          })
 
           }
           // Fin del procesamiento
@@ -189,5 +297,8 @@ window.onload = function () {
         })
   
     })
+
+
+    
   
   }
