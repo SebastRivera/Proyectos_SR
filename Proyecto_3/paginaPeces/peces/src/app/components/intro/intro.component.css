@@ -1,0 +1,197 @@
+/*
+ * Globals
+ */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Raleway:wght@500&display=swap'); 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+* {
+    box-sizing: border-box;
+  }
+
+/*
+ * Responsive
+ */
+ @media screen and (max-width: 1024px) {
+    iframe {
+        display: none;
+    }
+
+    .cover-container{
+        height: fit-content;
+    }
+
+  }
+
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+
+
+
+/*
+ * Base structure
+ */
+ html {
+    height: 100%;
+    background-color: aqua;
+  }
+
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  height: 23rem;
+  padding-bottom:0; 
+  min-height: 100%;
+  
+}
+
+.cover-container{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/../assets/images/deepsea.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+}
+
+header {
+  
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100em;
+}
+
+h3#catch{
+    padding-left: 3rem;
+}
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+  color: rgba(255, 255, 255, .5);
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+/*
+ *Container
+ */
+
+ main h1, main h2, main h3, main h4, main h5, main h6 {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+ main p,main a {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  /* Generic styles */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  main a {
+    background-color: rgb(52, 189, 114);
+    text-decoration: none;
+    color: white;
+    border-radius: .25rem;
+    text-align: center;
+    display: inline-block;
+    transition: all .3s;
+  }
+  
+  main a:hover {
+    opacity: .6;
+  }
+  
+  /* Styles for the hero image */
+  .hero {
+    /* Photo by mnm.all on Unsplash */
+    padding: 2rem 2rem;
+    /* grid styles */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+
+  }
+  
+  .hero > * {
+    color: white;
+  }
+  
+  .hero > h1 {
+    font-size: 5vh;
+    padding-bottom: 0.2rem;
+  }
+  
+  .hero > article > p {
+    font-size: 3vh;
+    font-weight: 200;
+  }
+  
+  .hero > article > a {
+    padding: 0.5rem;
+    margin-top: .75rem;
+  }
+  
+  /* breweries styles */
+  .breweries {
+    padding: 2rem;
+  }
+  
+  
+  .botones{
+    display:flex;
+    flex-direction: column;
+    max-width: 50em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1em;   
+    font-size: 4vh;
+  }
+
+
+  /* footer */
+  footer {
+    padding: .75rem;
+    color: white;
+    text-align: center;
+    font-size: .75rem;
+  }
+
+
+  /*
+   * Image
+   */
+
+  

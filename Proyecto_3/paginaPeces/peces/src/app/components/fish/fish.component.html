@@ -1,0 +1,45 @@
+<main class="container-fluid">
+	<div class="row pt-2">
+		<div class="col-12">
+			
+				<a href="/fishes"><button class="noselect" >back</button></a>
+			
+		</div>
+
+
+		<!-- Etiquetas a renderizar - INICIO -->
+		<div class="col-12 col-md-4 text-center justify-content-center mx-auto">
+			<div class="card border-0">
+				<img src="{{fish['Species Illustration Photo'].src}}" class="rounded mx-auto d-block img-thumbnail border-0 shadow-4-strong" alt="{{fish['Species Illustration Photo'].alt}}">
+				<div class="card-body">
+					<h5 class="card-title">{{fish["Species Name"]}}</h5>
+					<div class="my-theme">
+					<p class="card-text">
+						<mat-tab-group [backgroundColor]="'primary'" [color]="'primary'">
+							<mat-tab class='l1'label="Description"> {{fish["Quote"]}} </mat-tab>
+							<mat-tab label="Population"> {{fish["Population"] ? fish["Population"] : 'No information'}} </mat-tab>
+							<mat-tab label="Health Benefits"> {{fish["Health Benefits"].substring(3,fish["Health Benefits"].indexOf('.')+1)}} </mat-tab>
+					  	</mat-tab-group>
+						
+					</p>
+					</div>
+					<div class="stats">
+						<div class="half divisor">
+							<div class="stat">{{fish["Protein"]}}</div>
+							<div class="stat-value">Protein</div>
+						</div>
+						<div class="half">
+							<div class="stat">{{fish["Sodium"]}}</div>
+							<div class="stat-value">Sodium</div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- Etiquetas a renderizar - FIN -->
+			
+	</div>
+</main>
