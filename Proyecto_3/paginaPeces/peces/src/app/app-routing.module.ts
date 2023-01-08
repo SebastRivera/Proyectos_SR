@@ -9,7 +9,7 @@ import { PhotosComponent } from './components/photos/photos.component';
 const routes: Routes = [
    { path: "intro", component: IntroComponent },
    { path: "fishes", component: FishesComponent },
-   { path: "movie/:Species Name", component: FishComponent },
+   { path: "fishes/:Species Name", component: FishComponent },
    { path: "photos", component: PhotosComponent },
    { path: "**", redirectTo: "intro" }
 ];

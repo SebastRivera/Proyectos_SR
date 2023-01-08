@@ -14,6 +14,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';  
 import { NgxPaginationModule } from 'ngx-pagination';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
+
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +29,6 @@ import {MatTabsModule} from '@angular/material/tabs';
     FishesComponent,
     PhotosComponent,
     FishComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -34,6 +41,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatIconModule,
     NgxPaginationModule,
     MatTabsModule,
+    MatExpansionModule,
+    FormsModule, 
+    Ng2SearchPipeModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

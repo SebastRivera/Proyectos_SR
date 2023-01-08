@@ -113,13 +113,13 @@ footer {
   }
 
 .cover-container{
-    background-image: linear-gradient(rgba(102, 100, 100, 0.5), rgba(75, 73, 73, 0.452)), url("/../assets/images/deepsea2.png");
+    background-image: linear-gradient(rgba(20, 20, 20, 0.377), rgba(24, 23, 23, 0.377)), url("https://images.pexels.com/photos/5250849/pexels-photo-5250849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat:no-repeat;
     background-size:cover;
 }
 
 body{
-  background-image: url("/../assets/images/deepsea2.png");
+  background-image: url("https://images.pexels.com/photos/5250849/pexels-photo-5250849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-repeat:no-repeat;
   background-size:cover;
 }

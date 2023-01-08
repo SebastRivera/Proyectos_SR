@@ -22,6 +22,14 @@
   }
 
 
+  @media screen and (max-width: 600px) {
+    h1{
+      line-height: 3rem;
+    }
+
+  }
+
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,

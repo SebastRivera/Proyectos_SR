@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GalleryServicesService } from './service/gallery-services.service';
+import { ImageService } from './service/image.service';
 import { ResourcesService } from './service/resources.service';
 
 @Component({

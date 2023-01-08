@@ -1,0 +1,134 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="description" content="">
+  
+	
+	
+	
+  
+  
+	<style>
+	  .bd-placeholder-img {
+		font-size: 1.125rem;
+		text-anchor: middle;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		user-select: none;
+	  }
+  
+	  @media (min-width: 768px) {
+		.bd-placeholder-img-lg {
+		  font-size: 3.5rem;
+		}
+	  }
+  
+	  .b-example-divider {
+		height: 3rem;
+		background-color: rgba(0, 0, 0, .1);
+		border: solid rgba(0, 0, 0, .15);
+		border-width: 1px 0;
+		box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+	  }
+  
+	  .b-example-vr {
+		flex-shrink: 0;
+		width: 1.5rem;
+		height: 100vh;
+	  }
+  
+	  .bi {
+		vertical-align: -.125em;
+		fill: currentColor;
+	  }
+  
+	  .nav-scroller {
+		position: relative;
+		z-index: 2;
+		height: 2.75rem;
+		overflow-y: hidden;
+	  }
+  
+	  .nav-scroller .nav {
+		display: flex;
+		flex-wrap: nowrap;
+		padding-bottom: 1rem;
+		margin-top: -1px;
+		overflow-x: auto;
+		text-align: center;
+		white-space: nowrap;
+		-webkit-overflow-scrolling: touch;
+	  }
+	</style>
+  
+	
+	<!-- Custom styles for this template -->
+	<link href="photos.component.css" rel="stylesheet">
+  </head>
+  <body class="d-flex text-center text-bg-dark">
+	
+	<div class="cover-container d-flex w-100 h-600 p-3 mx-auto flex-column">
+	<header class="mb-auto">
+	  <div class="navP">
+		<nav class="nav nav-masthead justify-content-center float-md-end">
+		  <a id="home" class="nav-link fw-bold py-1 px-0" aria-current="page" href="#">Home</a>
+		  <a id="fishes" class="nav-link fw-bold py-1 px-0 " href="http://localhost:4200/fishes">Fishes</a>
+		  <a id="gallery" class="nav-link fw-bold py-1 px-0 active" href="http://localhost:4200/photos">Gallery</a>
+		</nav>
+        <div class="form-outline">
+            <input class="form-control" type="text" [(ngModel)]="searchText" autocomplete="on" placeholder=" SEARCH A FISH  ">
+        </div>
+	  </div>
+      
+	</header>
+  
+    <main class="wrap">
+        <ul class="wrapper" *ngFor="let fish of fishes  | filter:searchText | paginate: { itemsPerPage: 1, currentPage: pages } ">
+            <li  class='card'>
+                
+                <img src="{{fish['Image Gallery'][0] ? fish['Image Gallery'][0]['src'] : 'https://imgs.search.brave.com/oEAxRBtaKUG3W0ppwMqDXHyryfleSL28JgbAW95ZWf4/rs:fit:800:800:1/g:ce/aHR0cHM6Ly8xNDkz/NDg4OTMudjIucHJl/c3NhYmxlY2RuLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/OS8wMy9uby1pbWFn/ZS1hdmFpbGFibGUu/cG5n'}}" 
+                class="foto img-fluid rounded-start" alt="{{fish['Image Gallery'][0] ? fish['Image Gallery'][0]['alt'] : 'No data'}}">
+                
+            </li>
+
+            <li  class='card'>
+                
+                <img src="{{fish['Image Gallery'][1] ? fish['Image Gallery'][1]['src'] : 'https://imgs.search.brave.com/oEAxRBtaKUG3W0ppwMqDXHyryfleSL28JgbAW95ZWf4/rs:fit:800:800:1/g:ce/aHR0cHM6Ly8xNDkz/NDg4OTMudjIucHJl/c3NhYmxlY2RuLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/OS8wMy9uby1pbWFn/ZS1hdmFpbGFibGUu/cG5n'}}" 
+                class="foto img-fluid rounded-start" alt="{{fish['Image Gallery'][1] ? fish['Image Gallery'][1]['alt'] : 'No data'}}">
+            
+            </li>
+
+            <li  class='card' >
+                
+                <img src="{{fish['Image Gallery'][2] ? fish['Image Gallery'][2]['src'] : 'https://imgs.search.brave.com/oEAxRBtaKUG3W0ppwMqDXHyryfleSL28JgbAW95ZWf4/rs:fit:800:800:1/g:ce/aHR0cHM6Ly8xNDkz/NDg4OTMudjIucHJl/c3NhYmxlY2RuLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/OS8wMy9uby1pbWFn/ZS1hdmFpbGFibGUu/cG5n'}}" 
+                class="foto img-fluid rounded-start" alt="{{fish['Image Gallery'][2] ? fish['Image Gallery'][2]['alt'] : 'No data'}}">
+            
+            </li>
+
+            <li  class='card' >
+                
+                <img src="{{fish['Image Gallery'][3] ? fish['Image Gallery'][3]['src'] : 'https://imgs.search.brave.com/oEAxRBtaKUG3W0ppwMqDXHyryfleSL28JgbAW95ZWf4/rs:fit:800:800:1/g:ce/aHR0cHM6Ly8xNDkz/NDg4OTMudjIucHJl/c3NhYmxlY2RuLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/OS8wMy9uby1pbWFn/ZS1hdmFpbGFibGUu/cG5n'}}" 
+                class="foto img-fluid rounded-start" alt="{{fish['Image Gallery'][3] ? fish['Image Gallery'][3]['alt'] : 'No data'}}">
+            
+            </li>
+
+            <li  class='card'>
+                
+                <img src="{{fish['Image Gallery'][4] ? fish['Image Gallery'][4]['src'] : 'https://imgs.search.brave.com/oEAxRBtaKUG3W0ppwMqDXHyryfleSL28JgbAW95ZWf4/rs:fit:800:800:1/g:ce/aHR0cHM6Ly8xNDkz/NDg4OTMudjIucHJl/c3NhYmxlY2RuLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/OS8wMy9uby1pbWFn/ZS1hdmFpbGFibGUu/cG5n'}}" 
+                class="foto img-fluid rounded-start" alt="{{fish['Image Gallery'][4] ? fish['Image Gallery'][4]['alt'] : 'No data'}}">
+            
+            </li>
+        </ul>  
+    </main>
+	
+		
+		<footer class="mt-auto text-white-50">
+			<pagination-controls class="numeros" (pageChange)="pages = $event"></pagination-controls>
+			<p>Recollected data from <a href="https://www.fishwatch.gov/developers" class="text-white">FishWatch</a>, by <a href="https://www.fishwatch.gov/contact-us" class="text-white">NOAA Fisheries</a>.</p>
+		  </footer>
+	 
+	
+	</div>
+  
+  </body>
+  

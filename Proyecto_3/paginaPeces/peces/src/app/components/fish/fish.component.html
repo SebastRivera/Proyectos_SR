@@ -2,7 +2,7 @@
 	<div class="row pt-2">
 		<div class="col-12">
 			
-				<a href="/fishes"><button class="noselect" >back</button></a>
+				<a href="fishes"><button class="noselect" >back</button></a>
 			
 		</div>
 
@@ -15,10 +15,11 @@
 					<h5 class="card-title">{{fish["Species Name"]}}</h5>
 					<div class="my-theme">
 					<p class="card-text">
-						<mat-tab-group [backgroundColor]="'primary'" [color]="'primary'">
-							<mat-tab class='l1'label="Description"> {{fish["Quote"]}} </mat-tab>
+						<mat-tab-group [backgroundColor]="'primary'" [color]="'primary'" dynamicHeight>
+							<mat-tab class='l1'label="Description"> {{fish["Quote"] ? fish["Quote"] : 'No information'}} </mat-tab>
 							<mat-tab label="Population"> {{fish["Population"] ? fish["Population"] : 'No information'}} </mat-tab>
-							<mat-tab label="Health Benefits"> {{fish["Health Benefits"].substring(3,fish["Health Benefits"].indexOf('.')+1)}} </mat-tab>
+							<mat-tab label="Health Benefits"> {{fish["Health Benefits"] ? 
+								fish["Health Benefits"].substring(3,fish["Health Benefits"].indexOf('.')+1) : 'No information'}} </mat-tab>
 					  	</mat-tab-group>
 						
 					</p>
@@ -38,6 +39,25 @@
 					
 				</div>
 			</div>
+			
+				<mat-card-content class="panel">
+					<mat-expansion-panel class='expansion' hideToggle>
+						<mat-expansion-panel-header>
+						  <mat-panel-title>
+							Additional Information
+						  </mat-panel-title>
+						  <mat-panel-description>
+							Texture, Color and Taste of the {{fish["Species Name"]}}
+						  </mat-panel-description>
+						</mat-expansion-panel-header>
+						<ul id="customCheck">
+							<li class="check">Texture: {{fish["Texture"] ? fish["Texture"].substring(3,fish["Texture"].indexOf('.')+1) : 'No information'}}</li>
+							<li class="check">Color: {{fish["Color"] ? fish["Color"].substring(3,fish["Color"].indexOf('.')+1) : 'No information'}}</li>
+							<li class="check">Taste: {{fish["Taste"] ? fish["Taste"].substring(3,fish["Taste"].indexOf('.')+1) : 'No information'}}</li>
+						</ul>
+					  </mat-expansion-panel>
+				</mat-card-content>
+			
 		</div>
 		<!-- Etiquetas a renderizar - FIN -->
 			
