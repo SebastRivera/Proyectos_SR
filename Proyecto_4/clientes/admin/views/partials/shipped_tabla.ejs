@@ -1,0 +1,44 @@
+<main class="col-md-8 ms-sm-auto col-lg-10 px-md-4">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2>Shipped products</h2>
+                    </div>
+                    <div class="col-sm-7">
+                        <a href="#" class="btn btn-secondary"><h5>Total of everything: <%= total  %></h5></a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Customer Number</th>
+                          <th>Order Number</th>
+                          <th>product Name</th>
+                          <th>Order Date</th>
+                          <th>priceEach</th>
+                          <th>Quantity Ordered</th>
+                          <th>Total</th>
+                          <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% arrProd.forEach((prod) => { %>  
+                        <tr>
+                            <td><%= prod.customerNumber %></td>  
+                            <td><%= prod.orderNumber %></td>  
+                            <td><%= prod.productName %></td>
+                            <td><%= prod.orderDate %></td>   
+                            <td><%= prod.priceEach %></td>  
+                            <td><%= prod.quantityOrdered %></td> 
+                            <th><%= Math.round(prod.priceEach * prod.quantityOrdered)  %></th>
+                            <td><%= prod.status %></td>        
+                        </tr>  
+                      <% }); %>   
+                </tbody>
+            </table>
+        </div>
+    </div>  
+</main>
